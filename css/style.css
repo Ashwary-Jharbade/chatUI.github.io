@@ -32,6 +32,9 @@ body {
   box-shadow: 1px 0px 20px 1px rgb(56 43 43 / 10%);
 }
 
+.people-list{
+  height: 78vh;
+}
 
 /* Chat List */
 
@@ -77,6 +80,10 @@ body {
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
+}
+
+.people-list-fill{
+  cursor: pointer;
 }
 
 /* width */
@@ -162,17 +169,19 @@ body {
 }
 .chat-setting i{
   margin: 0 10px;
+  cursor: pointer;
 }
 
 .chat-area{
   position: relative;
-  height: 80%;
+  height: 65vh;
   width: 100%;
 }
 
 .chat-surface{
   display: flexbox;
   width: 100%;
+  height: 60vh;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -240,14 +249,17 @@ body {
 .chat-control i{
   font-size: 30px;
   color: gray;
+  cursor: pointer;
 }
 
 .chat-button{
-  padding: 9px;
+  padding:11px 9px;
   border: none;
   background-color:#4a9af8;
   color: white;
   border-radius:3px;
+  width: 100%;
+  cursor: pointer;
 }
 
 .chat-button:hover{
@@ -290,12 +302,24 @@ body {
 @media screen and (min-width:421px) and (max-width:600px) {
   .chat-section{
     display:none;
-   }
+    width: 100%;
+  }
   .people-info{
     width: 100%;
   }
+
   .chat-list{
     width: 100%;
+  }
+
+  .chat-control{
+    position: relative;
+  }
+
+  .media-icons{
+    position: absolute;
+    top: -30px;
+    right: 6px;
   }
 }
 
@@ -309,6 +333,16 @@ body {
   .chat-list{
     width: 100%;
   }
+
+  .chat-control{
+    position: relative;
+  }
+
+  .media-icons{
+    position: absolute;
+    top: -30px;
+    right: 6px;
+  }
 }
 
 @media screen and (max-width:319px) {
@@ -320,6 +354,16 @@ body {
   }
   .chat-list{
     width: 100%;
+  }
+
+  .chat-control{
+    position: relative;
+  }
+
+  .media-icons{
+    position: absolute;
+    top: -30px;
+    right: 6px;
   }
 }
 
