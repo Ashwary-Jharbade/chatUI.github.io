@@ -34,7 +34,7 @@ const fullSize = (event) => {
   event.target.requestFullscreen();
 };
 
-const renderChat = () => {
+const renderChat = () => { 
   let width = document.body.clientWidth;
   if (width <= 601) {
     let obj = document.getElementById("chat_section");
@@ -56,15 +56,14 @@ const showList = () => {
 };
 
 const getNormalizeTime = () => {
-    let date = new Date();
-    let hr = date.getHours();
-    let min = date.getMinutes();
-    if (hr > 12) {
-        return `${ hr-12 }:${ min }pm`
-    }
-    return `${hr}:${min}pm`
-} 
-
+  let date = new Date();
+  let hr = date.getHours();
+  let min = date.getMinutes();
+  if (hr > 12) {
+    return `${hr - 12}:${min}pm`;
+  }
+  return `${hr}:${min}pm`;
+};
 
 // const onEntered = (event) => {
 //     if(event.key === "Enter") {
@@ -73,17 +72,17 @@ const getNormalizeTime = () => {
 // }
 
 const addUserMessage = () => {
-    let msg = document.getElementById("user_text");
-    if ( msg.value ) {
-        let time = getNormalizeTime();
-        let cobj = document.querySelector(".chat-surface");
-        let obj = createChat(msg.value,time,"message-right");
-        cobj.append(obj);
-        obj.scrollIntoView();
-    } else {
-        alert("Message is not valid!");
-    }
-    msg.value = "";
+  let msg = document.getElementById("user_text");
+  if (msg.value) {
+    let time = getNormalizeTime();
+    let cobj = document.querySelector(".chat-surface");
+    let obj = createChat(msg.value, time, "message-right");
+    cobj.append(obj);
+    obj.scrollIntoView();
+  } else {
+    alert("Message is not valid!");
+  }
+  msg.value = "";
 };
 
 window.addEventListener("resize", () => {
