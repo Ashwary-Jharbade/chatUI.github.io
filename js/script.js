@@ -1,3 +1,42 @@
+const chatData = [
+  {
+      "id":"abc1",
+      "client":"chat",
+      "time":"2:28pm",
+      "message":"Hi there, you remember we played bgmi yesterday. And we did chicken dinner together"
+  },
+  {
+      "id":"abc2",
+      "client":"user",
+      "time":"2:30pm",
+      "message":"Hello"
+  },
+  {
+      "id":"abc3",
+      "client":"chat",
+      "time":"2:31pm",
+      "message":"Can you send me the updated BGMI apk files"
+  },
+  {
+      "id":"abc4",
+      "client":"chat",
+      "time":"2:31pm",
+      "message":"Please"
+  },
+  {
+      "id":"abc5",
+      "client":"user",
+      "time":"2:35pm",
+      "message":"Lol, no"
+  },
+  {
+      "id":"abc6",
+      "client":"chat",
+      "time":"2:36pm",
+      "message":"Common, (.^.)"
+  }
+]
+
 const getEle = (ele, cls = "") => {
   let obj = document.createElement(ele);
   obj.classList = cls;
@@ -129,7 +168,7 @@ window.onload = () => {
     .then((response) => response.json())
     .then((data) => {
       chats = data.data;
-      addPrevChats(chats, cobj);
+      addPrevChats(chatData, cobj);
     });
   cobj.scrollTop = cobj.scrollHeight;
 };
