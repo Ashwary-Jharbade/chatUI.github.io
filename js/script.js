@@ -164,11 +164,14 @@ window.onload = () => {
     item.innerHTML = listItems;
   });
   let cobj = document.querySelector(".chat-surface");
-  fetch("../json/chats.json")
-    .then((response) => response.json())
-    .then((data) => {
-      chats = data.data;
-      addPrevChats(chatData, cobj);
-    });
+
+  // fetch("../json/chats.json")
+  //   .then((response) => response.json())
+  //   .then((data) => {
+  //     chats = data.data;
+  //     addPrevChats(chatData, cobj);
+  //   });
+
+  addPrevChats(chatData, cobj);
   cobj.scrollTop = cobj.scrollHeight;
 };
